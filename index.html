@@ -4,12 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
     <title>Mulah Test</title>
   </head>
   <body>
     <div id="container">
-      <table id="table-1"></table>
-      <table id="table-2"></table>
+      <!-- Table 1 -->
+      <table id="table-1">
+        <caption>
+          Table 1
+        </caption>
+        <thead>
+          <tr>
+            <th>Index #</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody id="table-1-body"></tbody>
+      </table>
+
+      <!-- Table 2 -->
+      <table id="table-2">
+        <caption>
+          Table 2
+        </caption>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody id="table-2-body"></tbody>
+      </table>
     </div>
 
     <script src="script.js"></script>

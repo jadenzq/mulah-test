@@ -1,0 +1,98 @@
+/* 1. Global Reset & Typography */
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f4f7f6; /* Light gray background to make tables pop */
+  color: #333;
+  margin: 0;
+  padding: 40px;
+}
+
+/* 2. Container Layout (Flexbox) */
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers tables */
+  gap: 40px; /* Space between tables */
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* 3. General Table Styling */
+table {
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensures corners stay rounded */
+  min-width: 300px;
+  flex: 1; /* Allows tables to grow evenly */
+}
+
+/* 4. Table Caption (Title) */
+caption {
+  caption-side: top;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* 5. Header Styling */
+thead tr {
+  background-color: #009879; /* Modern Teal Theme */
+  color: #ffffff;
+  text-align: left;
+}
+
+th {
+  padding: 15px 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+/* 6. Body & Row Styling */
+td {
+  padding: 12px 20px;
+  border-bottom: 1px solid #dddddd;
+  font-size: 0.95rem;
+}
+
+/* Zebra Striping (Alternating row colors) */
+tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+/* Hover Effect */
+tbody tr:hover {
+  background-color: #f1f8f6; /* Light tint of the header color */
+  cursor: default;
+  transform: scale(1.01); /* Subtle "pop" effect */
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Last row border fix */
+tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+/* 7. Responsive Adjustments */
+@media (max-width: 768px) {
+  #container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  table {
+    width: 100%;
+  }
+}
